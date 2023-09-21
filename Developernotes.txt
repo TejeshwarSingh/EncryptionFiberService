@@ -1,0 +1,16 @@
+go mod init app
+go mod tidy
+
+
+docker build -t gofiber-encryption .
+docker run -p 3050:3050 gofiber-encryption
+
+docker stop $(docker ps -q --filter ancestor=gofiber-encryption)
+docker rm $(docker ps -a -q --filter ancestor=gofiber-encryption)
+docker rmi gofiber-encryption
+
+
+After running the above commands, you can send POST requests to http://localhost:3050/encrypt and http://localhost:3050/decrypt with a 
+form parameter named text to test encryption and decryption, respectively.
+
+Note: The encryption key used here (secretKey) is hardcoded for simplicity. In a real-world scenario, you'd want to use a secure method to store and retrieve this key.
