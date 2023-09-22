@@ -3,7 +3,7 @@ go mod tidy
 
 
 docker build -t gofiber-encryption .
-docker run -p 3050:3050 gofiber-encryption
+docker run -d -p 3050:3050 gofiber-encryption
 
 docker stop $(docker ps -q --filter ancestor=gofiber-encryption)
 docker rm $(docker ps -a -q --filter ancestor=gofiber-encryption)
