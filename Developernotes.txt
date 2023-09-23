@@ -14,3 +14,17 @@ After running the above commands, you can send POST requests to http://localhost
 form parameter named text to test encryption and decryption, respectively.
 
 Note: The encryption key used here (secretKey) is hardcoded for simplicity. In a real-world scenario, you'd want to use a secure method to store and retrieve this key.
+
+
+http://localhost:3050/encrypt
+
+{
+  "text": "{{$randomAlphaNumeric}}"
+}
+
+http://localhost:3050/decrypt
+
+{
+    "text": "KqOOKRnR7jCLa9dDmSMOEg8qC1mZj4_8t3a_6XnGI8Q="
+}
+

@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "350ec4e7-3940-4a72-a5c3-86e6f75162e1",
+		"name": "go-fiber",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15227583",
+		"_collection_link": "https://lunar-desert-973794.postman.co/workspace/NJS~d3e59544-d421-4ef7-b471-de7464e34a6d/collection/15227583-350ec4e7-3940-4a72-a5c3-86e6f75162e1?action=share&source=collection_link&creator=15227583"
+	},
+	"item": [
+		{
+			"name": "encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Hello, World!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3050/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3050",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"KqOOKRnR7jCLa9dDmSMOEg8qC1mZj4_8t3a_6XnGI8Q=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3050/decrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3050",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
